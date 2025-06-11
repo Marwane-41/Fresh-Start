@@ -25,33 +25,28 @@ export default function Welcome() {
 
   useEffect(() => {
     if (completed) {
-      // Delay before redirect
+      // Delay before redirect // for now no redirect
       setTimeout(() => {
-        
       }, 1000);
     }
   }, [completed]);
-
     return (
-      <div className="flex items-center justify-center min-h-screen bg-black">
-      <div className="relative w-[80%] h-6 bg-gray-800 rounded-full overflow-hidden">
-        {/* Loading Bar */}
-        <div
-          className="absolute top-0 left-0 h-full bg-indigo-500 transition-all duration-100"
-          style={{ width: `${progress}%` }}
-        />
+      <div className="flex flex-col items-center justify-center min-h-screen bg-[#fff7ec] text-[#4e342e] ">  
+        <div className=" text-center p-8"> 
+        <h1 className="text-4xl font-bold mb-4"> 
+          Welcome to Ola's Bakery 
+        </h1>
 
-        {/* Clock Icon */}
-        <div
-          className={`absolute -top-3 transition-all duration-100 text-white text-2xl ${
-            completed ? 'animate-bounce text-yellow-400' : ''
-          }`}
-          style={{ left: `${progress}%`, transform: 'translateX(-50%)' }}
-        >
-          🕒
+        <p className="text-lg mb-6">
+          Deliciously handmade. Fresh every morning.
+        </p>
+        
+
+        
+
         </div>
+        
       </div>
-    </div>
     );
   }
   
