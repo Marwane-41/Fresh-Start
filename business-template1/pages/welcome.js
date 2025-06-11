@@ -8,19 +8,10 @@ export default function Welcome() {
   const [completed, setCompleted] = useState(false);
 
   useEffect(() => {
-    // Progress animation
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setCompleted(true);
-          return 100;
-        }
-        return prev + 1;
-      });
-    }, 30); // speed of progress
-
-    return () => clearInterval(interval);
+    const timeout = setTimeout(() => {
+      router.push("/");
+    }, 3000); // wait 3s then redirect
+    return () => clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
@@ -30,23 +21,15 @@ export default function Welcome() {
       }, 1000);
     }
   }, [completed]);
-    return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-[#fff7ec] text-[#4e342e] ">  
-        <div className=" text-center p-8"> 
-        <h1 className="text-4xl font-bold mb-4"> 
-          Welcome to Ola's Bakery 
-        </h1>
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#fff7ec] text-[#4e342e]">
 
-        <p className="text-lg mb-6">
-          Deliciously handmade. Fresh every morning.
-        </p>
-        
-
-        
-
+        <div className="animate-fade-in text-center p-8">
+        <h1 className="text-4xl font-bold mb-4">Welcome to Ola's Bakery</h1>
+        <p className="text-lg mb-6">Deliciously handmade. Fresh every morning.</p>
         </div>
-        
-      </div>
-    );
+    </div>
+
+  );
   }
   

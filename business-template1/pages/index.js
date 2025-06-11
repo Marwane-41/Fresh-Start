@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import Navbar from "./components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,11 +14,7 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return (
-    <div>  
+    <Navbar />
 
-      <h1 className=" text-3xl font-bold underline text-center"> 
-        Hello world 
-      </h1>
-    </div>
   );
 }
