@@ -1,23 +1,19 @@
 import Link from "next/link";
 
-
 export default function Navbar(){
 return(
+    <nav class= "bg-[#d5a845] fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
-    <header className="bg-[#fff7ec] shadow-md sticky top-0 z-50">
-    <nav className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <span className="text-2xl font-bold text-[#4e342e] tracking-wide">
-            Ola's Bakery
-        </span>
-      
-      </nav>
-
-      <div className="hidden md:flex space-x-6 text-[#4e342e] font-medium">
-          <Link href="/menu" className="hover:text-yellow-600 transition">Menu</Link>
-          <Link href="/about" className="hover:text-yellow-600 transition">About</Link>
-          <Link href="/contact" className="hover:text-yellow-600 transition">Contact</Link>
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <span class=" {`${eduFont.className} text-5xl text-[#5e3023]`} self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ola's Bakery</span>
+        </a>
+            
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+  
         </div>
-      </header>
+    </div>
+    </nav>
 );
 
 }

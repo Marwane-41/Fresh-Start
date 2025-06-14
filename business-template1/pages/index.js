@@ -1,20 +1,15 @@
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/Navbar";
+import { Edu_NSW_ACT_Hand_Cursive } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const eduFont = Edu_NSW_ACT_Hand_Cursive({
+    weight: "400",
+    subsets: ["latin"],
+  });
 
 export default function Home() {
   return (
     <Navbar />
-
   );
 }

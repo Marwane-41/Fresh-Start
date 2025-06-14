@@ -1,7 +1,14 @@
 import {useEffect,useState } from "react";
 import { useRouter } from 'next/router'; // <-- Pages Router
+import { Edu_NSW_ACT_Foundation } from "next/font/google";
 
-export default function Welcome() {
+
+const eduFont = Edu_NSW_ACT_Foundation({
+    weight: "400",
+    subsets: ["latin"],
+  });
+
+ function Welcome() {
 
     const router = useRouter();
   const [progress, setProgress] = useState(0);
