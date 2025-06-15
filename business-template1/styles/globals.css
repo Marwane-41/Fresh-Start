@@ -5,12 +5,12 @@
   src: url("../public/fonts/EduNSWACTCursive-Regular.ttf");
 }
 
-
 @import "tailwindcss";
 
 @theme{
   --font-edu : Edu, "sans-serif";
 }
+
 body {
   background: var(--background);
   color: var(--foreground);

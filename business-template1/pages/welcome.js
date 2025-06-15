@@ -4,8 +4,8 @@ import { useRouter } from 'next/router'; // <-- Pages Router
 export default function Welcome() {
 
     const router = useRouter();
-  const [progress, setProgress] = useState(0);
-  const [completed, setCompleted] = useState(false);
+    const [progress, setProgress] = useState(0);
+    const [completed, setCompleted] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
