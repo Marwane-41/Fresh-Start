@@ -7,7 +7,7 @@ export default function Navbar(){
             {/* Logo & Title */}
             <a href="/" className="flex justify-front space-x-3 mb-5">
               <span className="font-edu text-5xl text-[#5e3023] font-bold">
-                My Business 
+                My Business Name 
               </span>
             </a>
     
