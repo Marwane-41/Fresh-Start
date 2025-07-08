@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Navbar(){
     return (
-        <nav className="bg-[#d5a845] w-full shadow-md">
-          <div className="max-w-screen-xl mx-auto px-4 py-6 flex items-center justify-between flex-col">
+        <nav className="fixed top-0 left-0 w-full bg-[#d5a845cc] shadow-md z-50">
+          <div className="max-w-screen-xl mx-auto px-4 py-6 flex items-center justify-between ">
             {/* Logo & Title */}
             <a href="/" className="flex justify-front space-x-3 mb-5">
               <span className="font-edu text-5xl text-[#5e3023] font-bold">
@@ -20,7 +20,7 @@ export default function Navbar(){
                 <a href="/menu" className="hover:text-white transition">Menu</a>
               </li>
               <li>
-                <a href="/about" className="hover:text-white transition">About Us</a>
+                <a href="/about" className="hover:text-white transition">About</a>
               </li>
               <li>
                 <a href="/contact" className="hover:text-white transition">Contact</a>

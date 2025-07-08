@@ -23,6 +23,10 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+body {
+  @apply bg-[#f3ead7] text-[#5e3023] font-sans;
+}
+
 .animate-fade-in {
   animation: fade-in 1s ease-out forwards;
 }
