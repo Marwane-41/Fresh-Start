@@ -24,7 +24,7 @@ export default function HomePage(){
             }}
             className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-[#d5a845cc] text-[#5e3023] font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-[#c1a63f] transition"
           >
-            Explore more
+            Explore our menu
           </button>
         </section>
   
