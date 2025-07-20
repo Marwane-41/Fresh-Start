@@ -42,7 +42,7 @@ export default function HomePage() {
         
         <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white text-center mb-6 font-edu">
-            Artisan Bakery
+            Local Bakery
           </h1>
           <p className="text-xl md:text-2xl text-white max-w-lg text-center mb-10">
             Handcrafted with passion since 1995
@@ -54,7 +54,7 @@ export default function HomePage() {
                 behavior: "smooth" 
               });
             }}
-            className="bg-[#d5a845] hover:bg-[#c19338] text-[#5e3023] font-semibold px-8 py-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105"
+            className="bg-[#d5a845] hover:bg-[#c19338] text-[#5e3023] font-semibold px-5 py-3 rounded-lg shadow-lg hover: transform transition duration-300 hover:scale-105"
           >
             Explore Our Menu
           </button>
