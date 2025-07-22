@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { useState, useEffect } from "react";
+
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,19 +15,19 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", handleEsc);
   }, [menuOpen]);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
-      {/* Top Navbar */}
       <div className="bg-[#d5a845]/80 backdrop-blur-lg shadow-lg px-6 py-4 flex items-center justify-between">
-        <Link
-          href="/"
-          onClick={() => setMenuOpen(false)}
+        <a
+          href="#hero"
+          onClick={closeMenu}
           className="text-3xl font-bold text-[#5e3023]"
         >
           Local Bakery
-        </Link>
+        </a>
 
-        {/* Hamburger button (only shown when menu is closed) */}
         {!menuOpen && (
           <button
             onClick={() => setMenuOpen(true)}
@@ -39,37 +39,22 @@ export default function Navbar() {
         )}
       </div>
 
-      {/* Fullscreen Overlay Menu */}
       {menuOpen && (
         <div className="fixed inset-0 bg-[#5e3023]/70 backdrop-blur-md z-40 flex flex-col items-center justify-center space-y-8 text-white text-3xl">
-          {/* X Button (inside the overlay) */}
           <button
-            onClick={() => setMenuOpen(false)}
+            onClick={closeMenu}
             className="absolute top-6 right-6 text-white text-4xl font-bold"
             aria-label="Close menu"
           >
             ✕
           </button>
 
-          <NavLink href="/" label="Home" onClick={() => setMenuOpen(false)} />
-          <NavLink href="/About" label="Our Story" onClick={() => setMenuOpen(false)} />
-          <NavLink href="/menu" label="Menu" onClick={() => setMenuOpen(false)} />
-          <NavLink href="/contact" label="Contact" onClick={() => setMenuOpen(false)} />
-          
+          <a href="/" onClick={closeMenu}>Home</a>
+          <a href="#about" onClick={closeMenu}>Our Story</a>
+          <a href="#menu" onClick={closeMenu}>Menu</a>
+          <a href="#contact" onClick={closeMenu}>Contact</a>
         </div>
       )}
     </nav>
-  );
-}
-
-function NavLink({ href, label, onClick }) {
-  return (
-    <Link
-      href={href}
-      onClick={onClick}
-      className="hover:text-[#d5a845] transition-colors duration-300"
-    >
-      {label}
-    </Link>
   );
 }
