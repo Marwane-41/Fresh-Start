@@ -50,7 +50,7 @@ export default function HomePage() {
           
           <button
             onClick={() => {
-              document.getElementById("history").scrollIntoView({ 
+              document.getElementById("about").scrollIntoView({ 
                 behavior: "smooth" 
               });
             }}
@@ -62,19 +62,19 @@ export default function HomePage() {
       </section>
 
       <section 
-        id="history"
+        id="about"
         ref={sectionRef}
-        className="py-28 px-6 max-w-4xl mx-auto text-center opacity-0 translate-y-10 transition-all duration-700"
+        className="py-3 px-3 max-w-4xl mx-auto text-center opacity-0 translate-y-10 transition-all duration-700"
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-10 font-edu">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 font-edu">
           Our Story
         </h2>
-        <div className="space-y-6 text-lg leading-relaxed">
+        <div className=" text-lg leading-relaxed">
           <p>
             What started as a small family kitchen in 1995 has grown into a local favorite for 
             handcrafted breads, pastries, and sweet treats.
           </p>
-          <p className="bg-[#d5a845]/20 p-6 rounded-xl border-2 border-[#d5a845]/30">
+          <p className="bg-[#d5a845]/20 p-3 rounded-xl border-2 border-[#d5a845]/30">
             <span className="font-edu text-2xl font-semibold">[BAKERYNAME]</span> was founded by a passionate 
             baker with a dream — to bring the warmth of homemade baking to every table in the neighborhood.
           </p>

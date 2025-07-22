@@ -1,7 +1,7 @@
 export default function AboutUs() {
     return (
-      <section id="about" className="min-h-screen flex items-center justify-center py-20">
-        <div className="max-w-2xl text-center text-[#333] px-4">
+      <section id="about" className="max-h-screen flex items-center justify-center ">
+        <div className="max-w-2xl text-center text-[#333] ">
           <h1 className="text-4xl font-bold mb-6">Our Story</h1>
           <p className="text-lg leading-relaxed">
             Welcome to our story page. We started our journey with a passion for creating something unique and meaningful.
